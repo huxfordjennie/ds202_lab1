@@ -1,0 +1,34 @@
+---
+title: "owner_jenniehuxford.Rmd"
+author: "Jennie Huxford"
+date: "9/5/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Name: Jennie Huxford
+
+
+What do you tell people about your field of study at a party? 
+
+I say that statistics isn't as bad as they think. 
+
+
+What are the three most important tools/strategies you use for organizing your work? 
+
+1. Writing things down in my planner.
+
+2. Making lists of things I need to do. 
+
+3. Rewriting notes after class more legibly. 
+
+Interesting fact about yourself?
+
+I want to run a half marathon in every state.
+
+
+
+
