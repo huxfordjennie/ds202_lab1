@@ -29,6 +29,90 @@ Interesting fact about yourself?
 
 I want to run a half marathon in every state.
 
+You may work on this with your partner or individually. 
+
+  1. Explain the difference between Git and Github.
+  Git is the tool where you manage the code and code history, whereas github is the service to store repositories of git.
+  2. Can Git and Github be used independently? Why don't we do so? Describe the advantages and disadvantages. 
+Yes they can both be used individually. We use them together because they were created to be used together to be more efficient. With just git, we cannot share repos with others. And with just github we cannot code within Rstudio to make sure the code is correct.
+  3. What is a repository in Git and how can you create a repository in Git (write out the command(s))? 
+
+echo "# random" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/huxfordjennie/random.git
+git push -u origin master
+
+# Coding Exercises 
+
+  You may work on this with your partner or individually. 
+
+  1. Write code to count the total number of `NA` occurrences in the vector 'X = c(47,34,33,65,37,NA,43,NA,11,NA,23,NA)`.
+```{r}
+X = c(47,34,33,65,37,NA,43,NA,11,NA,23,NA)
+length(which(is.na(X)))
+which(is.na(X))
+```
+
+  2. Run the following code: 
+```{r}
+X / sum(X, na.rm = TRUE)
+```
+
+```{r}
+   age = c(25,30,45,60,12,41)
+   smoker = c('T','F','T','F','F','F')
+   weight = c(120,137,0,168,91,142)
+   example_data = data.frame(age,smoker,weight)
+```
+   
+  This code took three vectors (`age`, `smoker`, and `weight`) and binded them together into an `R` object known as a 
+  `data.frame`. The advantage of `data.frame` is that it can handle vectors of different types. For example, age is a numeric 
+    vector but smoker status is a character vector (T or F). We named this `data.frame` as `example_data`. I obviously made a
+    data entry error: someone cannot have 0 weight. The correct weight should be 150 pounds. Write one line of code that can
+    easily correct this using the `[]` syntax. 
+
+```{r}
+weight[3]= 150
+weight
+```
+
+  3. In the following I have two code snippets. Turn these code snippets into functions. Think about what each function does
+  and what you would name it. How many arguments does it need? 
+```{r, eval=FALSE}
+
+avg_na<-function(x){
+  mean(is.na(x))}
+
+percent<- function(x){ (x / sum(x, na.rm = TRUE))}
+```
+  
+4. Write a function named `both_na()`. This function take two vectors of the same length and returns the number of positions that have an `NA` value in both vectors. 
+```{r}
+x<-c(1,2,3,NA,5,6,7,NA)
+y<-c(1,2,3,NA,5,NA,7,NA)
+
+```
+```{r}
+both_na<-function(x,y){
+na_x <- is.na(x)
+na_y <- is.na(y)
+length(which(na_x & na_y))
+  }
+both_na(x,y)
+```
+
+# Submission 
+
+Once you have finished Lab 1 and after committing all of your work (don't forget to first 'git add FILENAMES'), you should  push your work to GitHub. 
+
+Then each student (not team) should send an email titled  
+`ds202 lab1` (case-sensitive) to the grader, Yunhui Qi <qyh@iastate.edu>, before by 10 pm on Thursday Sept 5. The email should contain *only* 
+
+- Your name, student ID, github username, and GitHub repo name for Lab1, and 
+- Your partner's github username, and your partner's repo name to which you made changes. 
+
 
 
 
