@@ -1,0 +1,21 @@
+---
+title: "partner_carlos.Rmd"
+author: "Carlos"
+date: "9/5/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Name: Carlos
+GitHub username: cargo123
+   + What did the Owner do in the most recent commit? What is the commit ID? 
+   add files via upload
+   
+   + Knit the Owner's `owner_YourName.Rmd`. Are you able to do so without error? If you cannot, what errors did you encounter?
+   yes i could without error.
+   + Also include one tip for making Git/GitHub easier, or an error/difficulty you encountered.
+
+I would recommend spending time playing around with git hub and bash to help you fully understand it. 
