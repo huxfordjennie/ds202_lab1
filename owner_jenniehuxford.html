@@ -136,6 +136,68 @@ $(document).ready(function () {
 </ol>
 <p>Interesting fact about yourself?</p>
 <p>I want to run a half marathon in every state.</p>
+<p>You may work on this with your partner or individually.</p>
+<ol style="list-style-type: decimal">
+<li>Explain the difference between Git and Github. Git is the tool where you manage the code and code history, whereas github is the service to store repositories of git.</li>
+<li>Can Git and Github be used independently? Why don’t we do so? Describe the advantages and disadvantages. Yes they can both be used individually. We use them together because they were created to be used together to be more efficient. With just git, we cannot share repos with others. And with just github we cannot code within Rstudio to make sure the code is correct.</li>
+<li>What is a repository in Git and how can you create a repository in Git (write out the command(s))?</li>
+</ol>
+<p>echo “# random” &gt;&gt; README.md git init git add README.md git commit -m “first commit” git remote add origin <a href="https://github.com/huxfordjennie/random.git" class="uri">https://github.com/huxfordjennie/random.git</a> git push -u origin master</p>
+<div id="coding-exercises" class="section level1">
+<h1>Coding Exercises</h1>
+<p>You may work on this with your partner or individually.</p>
+<ol style="list-style-type: decimal">
+<li>Write code to count the total number of <code>NA</code> occurrences in the vector ’X = c(47,34,33,65,37,NA,43,NA,11,NA,23,NA)`.</li>
+</ol>
+<pre class="r"><code>X = c(47,34,33,65,37,NA,43,NA,11,NA,23,NA)
+length(which(is.na(X)))</code></pre>
+<pre><code>## [1] 4</code></pre>
+<pre class="r"><code>which(is.na(X))</code></pre>
+<pre><code>## [1]  6  8 10 12</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Run the following code:</li>
+</ol>
+<pre class="r"><code>X / sum(X, na.rm = TRUE)</code></pre>
+<pre><code>##  [1] 0.16040956 0.11604096 0.11262799 0.22184300 0.12627986         NA
+##  [7] 0.14675768         NA 0.03754266         NA 0.07849829         NA</code></pre>
+<pre class="r"><code>   age = c(25,30,45,60,12,41)
+   smoker = c('T','F','T','F','F','F')
+   weight = c(120,137,0,168,91,142)
+   example_data = data.frame(age,smoker,weight)</code></pre>
+<p>This code took three vectors (<code>age</code>, <code>smoker</code>, and <code>weight</code>) and binded them together into an <code>R</code> object known as a <code>data.frame</code>. The advantage of <code>data.frame</code> is that it can handle vectors of different types. For example, age is a numeric vector but smoker status is a character vector (T or F). We named this <code>data.frame</code> as <code>example_data</code>. I obviously made a data entry error: someone cannot have 0 weight. The correct weight should be 150 pounds. Write one line of code that can easily correct this using the <code>[]</code> syntax.</p>
+<pre class="r"><code>weight[3]= 150
+weight</code></pre>
+<pre><code>## [1] 120 137 150 168  91 142</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>In the following I have two code snippets. Turn these code snippets into functions. Think about what each function does and what you would name it. How many arguments does it need?</li>
+</ol>
+<pre class="r"><code>avg_na&lt;-function(x){
+  mean(is.na(x))}
+
+percent&lt;- function(x){ (x / sum(x, na.rm = TRUE))}</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Write a function named <code>both_na()</code>. This function take two vectors of the same length and returns the number of positions that have an <code>NA</code> value in both vectors.</li>
+</ol>
+<pre class="r"><code>x&lt;-c(1,2,3,NA,5,6,7,NA)
+y&lt;-c(1,2,3,NA,5,NA,7,NA)</code></pre>
+<pre class="r"><code>both_na&lt;-function(x,y){
+na_x &lt;- is.na(x)
+na_y &lt;- is.na(y)
+length(which(na_x &amp; na_y))
+  }
+both_na(x,y)</code></pre>
+<pre><code>## [1] 2</code></pre>
+</div>
+<div id="submission" class="section level1">
+<h1>Submission</h1>
+<p>Once you have finished Lab 1 and after committing all of your work (don’t forget to first ‘git add FILENAMES’), you should push your work to GitHub.</p>
+<p>Then each student (not team) should send an email titled<br />
+<code>ds202 lab1</code> (case-sensitive) to the grader, Yunhui Qi <a href="mailto:qyh@iastate.edu">qyh@iastate.edu</a>, before by 10 pm on Thursday Sept 5. The email should contain <em>only</em></p>
+<ul>
+<li>Your name, student ID, github username, and GitHub repo name for Lab1, and</li>
+<li>Your partner’s github username, and your partner’s repo name to which you made changes.</li>
+</ul>
+</div>
 
 
 
